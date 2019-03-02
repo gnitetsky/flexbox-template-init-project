@@ -532,7 +532,7 @@ header ul li {
 }
 
 .widget {
-    display: flex;
+    display: table;
     flex-direction: column;
     margin: 0 7.5px;
     width: 25%;
