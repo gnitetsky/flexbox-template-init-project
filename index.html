@@ -39,8 +39,8 @@
             <main class="main">
                 <nav class="main-nav">
                     <ul>
-                        <li><a href="#">Главная</a><span>&#61658;</span></li>
-                        <li><a href="#">Раздел</a><span>&#61658;</span></li>
+                        <li><a href="#">Главная</a><i class="fas fa-caret-right"></i></li>
+                        <li><a href="#">Раздел</a><i class="fas fa-caret-right"></i></li>
                         <li>Страница</li>
                     </ul>
                 </nav>
@@ -160,137 +160,170 @@
             </main>
 
             <aside class="side-bar left-bar">
-                <div class="widget-bar">
-                    <h3>Поиск по сайту</h3>
-                    <input type="search">
-                </div>
-                <div class="widget-bar">
-                    <h3>Категории</h3>
-                    <ul>
-                        <li><a href="#">HTML4 / HTML5</a></li>
-                        <li><a href="#">CSS2 / CSS3</a></li>
-                        <li><a href="#">Javascript / Jquery</a></li>
-                        <li><a href="#">PHP / MySQL</a></li>
-                        <li><a href="#">Less / Sass / Scss</a></li>
-                        <li><a href="#">Wordpress</a></li>
-                        <li><a href="#">Drupal</a></li>
-                        <li><a href="#">Bootstrap</a></li>
-                    </ul>
-                </div>
-                <div class="widget-bar">
-                    <h3>О шаблоне</h3>
-                    <p>Шаблон разработан для изучения адаптивной верстки на HTML5, оформления с помощью CSS3,
-                        подключения готовых библиотек и плагинов Jquery.</p>
+                <div class="bar-wrapper">
+                    <div class="widget-bar">
+                        <h3>Поиск по сайту</h3>
+                        <div class="search">
+                            <form action="#">
+                                <button type="submit"><i class="fas fa-search"></i></button>
+                                <input type="search" placeholder="Введите текст и нажмите Enter">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="widget-bar">
+                        <h3>Категории</h3>
+                        <ul>
+                            <li><a href="#">HTML4 / HTML5</a></li>
+                            <li><a href="#">CSS2 / CSS3</a></li>
+                            <li><a href="#">Javascript / Jquery</a></li>
+                            <li><a href="#">PHP / MySQL</a></li>
+                            <li><a href="#">Less / Sass / Scss</a></li>
+                            <li><a href="#">Wordpress</a></li>
+                            <li><a href="#">Drupal</a></li>
+                            <li><a href="#">Bootstrap</a></li>
+                        </ul>
+                    </div>
+                    <div class="widget-bar">
+                        <h3>О шаблоне</h3>
+                        <p>Шаблон разработан для изучения адаптивной верстки на HTML5, оформления с помощью CSS3,
+                            подключения готовых библиотек и плагинов Jquery.</p>
+                    </div>
                 </div>
             </aside>
 
             <aside class="side-bar right-bar widget-bar">
-                <h3>Новые статьи</h3>
-                <div class="right-bar-wrapper">
-                    <a href="#">
-                        <div class="right-bar-item">
-                            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
-                            <div class="img-wrapper">
-                                <img src="assets/img/samples/100x100___1.jpg" alt="#">
+                <div class="bar-wrapper">
+                    <div class="right-bar-wrapper">
+                        <h3>Новые статьи</h3>
+                        <a href="#">
+                            <div class="right-bar-item">
+                                <div class="bar-item">
+                                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
+                                    <div class="img-wrapper">
+                                        <img src="assets/img/samples/100x100___1.jpg" alt="#">
+                                    </div>
+                                    <div class="text-wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Error, omnis quam! Aliquid architecto asperiores atque blanditiis error, ipsum
+                                        magni
+                                        maxime molestias, mollitia neque odit quam quia reiciendis sed velit veritatis.
+                                    </div>
+                                </div>
                             </div>
-                            <div class="text-wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error,
-                                omnis quam! Aliquid architecto asperiores atque blanditiis error, ipsum magni maxime
-                                molestias, mollitia neque odit quam quia reiciendis sed velit veritatis.</div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="right-bar-item">
-                            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
-                            <img src="assets/img/samples/100x100___2.jpg" alt="#">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci autem commodi
-                                dolore
-                                ea,
-                                eaque enim ex fugiat ipsum laudantium magni modi neque numquam omnis perspiciatis soluta
-                                tempora
-                                totam voluptatum!</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="right-bar-item">
-                            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
-                            <img src="assets/img/samples/100x100___3.jpg" alt="#">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci autem commodi
-                                dolore
-                                ea,
-                                eaque enim ex fugiat ipsum laudantium magni modi neque numquam omnis perspiciatis soluta
-                                tempora
-                                totam voluptatum!</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="right-bar-item">
-                            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
-                            <img src="assets/img/samples/100x100___4.jpg" alt="#">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci autem commodi
-                                dolore
-                                ea,
-                                eaque enim ex fugiat ipsum laudantium magni modi neque numquam omnis perspiciatis soluta
-                                tempora
-                                totam voluptatum!</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="right-bar-item">
-                            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
-                            <img src="assets/img/samples/100x100___5.jpg" alt="#">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci autem commodi
-                                dolore
-                                ea,
-                                eaque enim ex fugiat ipsum laudantium magni modi neque numquam omnis perspiciatis soluta
-                                tempora
-                                totam voluptatum!</p>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="right-bar-item">
-                            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
-                            <img src="assets/img/samples/100x100___6.jpg" alt="#">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci autem commodi
-                                dolore
-                                ea,
-                                eaque enim ex fugiat ipsum laudantium magni modi neque numquam omnis perspiciatis soluta
-                                tempora
-                                totam voluptatum!</p>
-                        </div>
-                    </a>
+                        </a>
+                        <a href="#">
+                            <div class="right-bar-item">
+                                <div class="bar-item">
+                                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
+                                    <div class="img-wrapper">
+                                        <img src="assets/img/samples/100x100___2.jpg" alt="#">
+                                    </div>
+                                    <div class="text-wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Ab
+                                        adipisci autem commodi dolore ea, eaque enim ex fugiat ipsum laudantium magni
+                                        modi
+                                        neque numquam omnis perspiciatis soluta tempora totam voluptatum!
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="right-bar-item">
+                                <div class="bar-item">
+                                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
+                                    <div class="img-wrapper">
+                                        <img src="assets/img/samples/100x100___3.jpg" alt="#">
+                                    </div>
+                                    <div class="text-wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Adipisci distinctio dolorum facilis ipsa vel. Alias animi beatae cum ea eligendi
+                                        laboriosam minus modi neque, possimus quos reiciendis totam veniam voluptatum.
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="right-bar-item">
+                                <div class="bar-item">
+                                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
+                                    <div class="img-wrapper">
+                                        <img src="assets/img/samples/100x100___4.jpg" alt="#">
+                                    </div>
+                                    <div class="text-wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Atque, autem consequatur ex illo inventore iusto modi molestias nesciunt nisi
+                                        non
+                                        obcaecati perferendis qui quod quos, recusandae rerum, sequi totam! Dolorum?
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="right-bar-item">
+                                <div class="bar-item">
+                                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
+                                    <div class="img-wrapper">
+                                        <img src="assets/img/samples/100x100___5.jpg" alt="#">
+                                    </div>
+                                    <div class="text-wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Alias consequatur, dolores eaque eius explicabo facere id illo impedit, labore
+                                        laboriosam magni optio placeat porro provident quaerat sequi sit? Nostrum,
+                                        porro?
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="right-bar-item">
+                                <div class="bar-item">
+                                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
+                                    <div class="img-wrapper">
+                                        <img src="assets/img/samples/100x100___6.jpg" alt="#">
+                                    </div>
+                                    <div class="text-wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Aspernatur blanditiis consequatur consequuntur debitis deleniti doloremque earum
+                                        est
+                                        explicabo molestias nostrum, quam ratione rem rerum sapiente, veniam. Eligendi
+                                        hic
+                                        sed sint!
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </aside>
         </div>
-
         <div class="widgets-container">
-            <article class="widget">
-                <h3>Заголовок виджета</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A earum facere minus officia porro.
-                    Atque
-                    ducimus excepturi illo ipsa, nam necessitatibus odit recusandae unde! Eligendi harum itaque
-                    minima quis.
-                    Labore.</p>
-            </article>
-            <article class="widget">
-                <h3>Заголовок виджета</h3>
-                <p>Lorem esse eveniet fugit ipsum labore molestiae mollitia nesciunt, nulla quae similique, tempore
-                    tenetur
-                    vel.</p>
-            </article>
-            <article class="widget">
-                <h3>Заголовок виджета</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, modi officiis. Adipisci
-                    consectetur
-                    deleniti dolorem dolorum ducimus esse laborum nam natus nobis officiis perferendis, qui rem
-                    sapiente,
-                    sed totam voluptatibus.</p>
-            </article>
-            <article class="widget">
-                <h3>Заголовок виджета</h3>
-                <p>Accusantium, ad, beatae dignissimos dolorem doloremque ducimus est illo libero magnam numquam
-                    obcaecati
-                    officia officiis omnis perspiciatis, provident repellat sapiente suscipit tenetur!</p>
-            </article>
+            <div class="widget-wrap">
+                <article class="widget">
+                    <h3>Заголовок виджета</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A earum facere minus officia porro.
+                        Atque ducimus excepturi illo ipsa, nam necessitatibus odit recusandae unde! Eligendi harum
+                        itaque
+                        minima quis. Labore.</p>
+                </article>
+            </div>
+            <div class="widget-wrap">
+                <article class="widget">
+                    <h3>Заголовок виджета</h3>
+                    <p>Lorem esse eveniet fugit ipsum labore molestiae mollitia nesciunt, nulla quae similique, tempore
+                        tenetur vel.</p>
+                </article>
+            </div>
+            <div class="widget-wrap">
+                <article class="widget">
+                    <h3>Заголовок виджета</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, modi officiis. Adipisci
+                        consectetur deleniti dolorem dolorum ducimus esse laborum nam natus nobis officiis perferendis,
+                        qui
+                        rem sapiente, sed totam voluptatibus.</p>
+                </article>
+            </div>
+            <div class="widget-wrap">
+                <article class="widget">
+                    <h3>Заголовок виджета</h3>
+                    <p>Accusantium, ad, beatae dignissimos dolorem doloremque ducimus est illo libero magnam numquam
+                        obcaecati officia officiis omnis perspiciatis, provident repellat sapiente suscipit tenetur!</p>
+                </article>
+            </div>
         </div>
 
         <footer>

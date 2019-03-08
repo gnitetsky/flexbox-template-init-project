@@ -481,6 +481,7 @@ body {
     background-size: cover;
 
 }
+
 .content-wrapper {
     max-width: 1320px;
     margin: 0 auto 30px auto;
@@ -522,13 +523,13 @@ body {
     letter-spacing: 3px;
     font-weight: 700;
     margin: 15px 0;
-    margin: 20px 0 45px 0;
+    margin: 19px 0 47px 0;
+    text-align: center;
 }
 
 .nav-menu {
     margin: 0 -15px -15px -15px;
 }
-
 
 .nav-menu ul {
     list-style-type: none;
@@ -544,20 +545,20 @@ a {
     color: inherit;
 }
 
-
-.nav-menu li.active, .nav-menu a:hover, .nav-menu a:focus {
+.nav-menu li.active a, .nav-menu a:hover, .nav-menu a:focus {
     color:#bb1a1a;
-    background-color:rgba(0, 0, 0, 0.4);
+    background-color:rgba(0, 0, 0, 0.35);
     border-radius: 5px;
 }
+
 .nav-menu ul li {
     display: inline-block;
     line-height: 21px;
-    margin: 5px;
+    margin: 5px 3px;
 
 }
 
-.nav-menu ul li>a {
+.nav-menu ul li > a {
     display: block;
     padding: 10px 15px;
 }
@@ -565,21 +566,31 @@ a {
 .widgets-container {
     display: flex;
     flex-direction: row;
-    margin: 15px -7.5px
+    margin: 22.5px -7.5px 0 -7.5px;
+}
+
+.widget-wrap {
+    width: 25%;
+    margin-bottom: 15px;
 }
 
 .widget {
     display: table;
     flex-direction: column;
     margin: 0 7.5px;
-    width: 25%;
 }
+
 h3 {
+    font-family: "Lora", serif;
+    font-weight: 300;
+    letter-spacing: 1.5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-    padding-bottom: 10px;
+    padding-bottom: 12px;
+    padding-top: 6px;
     margin: 0;
 }
-aside .widget-bar, .right-bar, header, footer, article {
+
+aside .widget-bar, .right-bar-wrapper, header, footer, article {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     padding: 15px;
@@ -599,9 +610,79 @@ aside .widget-bar, .right-bar, header, footer, article {
     margin: 15px 0;
 }
 
+.widget-bar P,
+.widget p {
+    line-height: 30px;
+    margin-bottom: 0;
+}
+
+.widget-bar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+.widget-bar ul li > a {
+    display: block;
+    padding: 7.5px 0 7.5px 0;
+    transition: padding-left 0.5s;
+}
+
+.widget-bar ul li > a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding-left: 10px;
+    color: #bb1a1a;
+}
+
+.widget-bar ul li > a:focus {
+    color: #bb1a1a;
+}
+
+.search {
+    margin: 17px 0 7px 0;
+}
+
+form {
+    position: relative;
+}
+
+button, input {
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+}
+
+button {
+    position: absolute;
+    cursor: pointer;
+    padding: 6.5px 9px 6.5px 9px;
+    border-right:  0.5px solid rgba(255, 255, 255, 0.2);
+}
+
+input {
+    width: 100%;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 7.5px 7.5px 7.5px 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 12px;
+    text-overflow: ellipsis;
+}
+
+input::placeholder {
+    color: white;
+}
+
+input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 .left-bar {
     order: -1;
 }
+
 .side-bar.left-bar {
     flex: 0 0 220px;
 }
@@ -612,36 +693,47 @@ aside .widget-bar, .right-bar, header, footer, article {
     padding: 0;
 }
 
-.side-bar.right-bar h3 {
-    margin: 15px 15px 0 15px;
-}
-
-/* .right-bar-wrapper {
-    max-width: 240px;
-} */
-
-.right-bar-wrapper a {
-    display: block;
+.right-bar-wrapper {
+    padding-bottom: 30px;
 }
 
 .right-bar-item {
+    margin: 15px -15px -7px -15px;
+    padding-bottom: 5px;
+}
+
+.right-bar-item:hover {
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8),  rgba(0, 0, 0, 0.0));
+}
+
+.right-bar-wrapper a:focus h4 {
+    color: #bb1a1a;
+}
+
+.bar-item {
     max-height: 175px;
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-    padding: 0 15px;
+    padding: 0 15px 0 15px;
 }
 
-.right-bar-item h4 {
+.bar-item h4 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 100%;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin: 5px 0 12px 0;
+    transition: 0.5s;
 }
 
 .img-wrapper {
     width: 75px;
+    height: 75px;
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .text-wrapper {
@@ -658,21 +750,18 @@ aside .widget-bar, .right-bar, header, footer, article {
     line-height: 19px;
 }
 
-.right-bar-item img {
+.bar-item img {
     width: 100%;
     transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
-.right-bar-item:hover img {
+.bar-item:hover h4, .bar-item h4:focus {
+    color: #bb1a1a;
+ }
+
+.bar-item:hover img {
     transform: scale(1.2);
-    
 }
-
-
-
-
-
-
 
 .main {
     width: 100%;
@@ -691,13 +780,32 @@ aside .widget-bar, .right-bar, header, footer, article {
 .main-nav ul {
     display: flex;
     justify-content: flex-end;
-    padding: 10px;
+    padding: 11px 18px;
 }
 
 .main-nav li {
     display: inline;
     list-style-type: none;
     letter-spacing: 2px;
+    font-weight: 700;
+    padding-right: 5px;
+}
+
+.main-nav a {
+    padding-right: 5px;
+}
+
+.main-nav li:last-child {
+    font-weight: 300;
+}
+
+.main-nav li a:hover {
+    color: #bb1a1a;
+    text-shadow: 0 0 5px black;
+}
+
+.main-nav li a:focus {
+    color: #bb1a1a;
 }
 
 .main-title {
@@ -708,8 +816,7 @@ aside .widget-bar, .right-bar, header, footer, article {
     letter-spacing: 3px;
     font-family: "Lora", serif;
     font-weight: 300;
-    padding: 10px;
-
+    padding: 12px;
 }
 
 .main-content {
@@ -722,7 +829,6 @@ aside .widget-bar, .right-bar, header, footer, article {
 .card-wrapper {
     flex: 0 0 33.33%;
     transition: transform 0.5s, -webkit-transform 0.5s;
-
 }
 
 .card {
@@ -732,10 +838,10 @@ aside .widget-bar, .right-bar, header, footer, article {
     margin: 7.5px;
     overflow: hidden;
     transition: transform 0.5s, -webkit-transform 0.5s;
-
 }
 
-.card p, .card h4{
+.card p,
+.card h4 {
     position: absolute;
     margin: 0;
     width: 100%;
@@ -749,10 +855,12 @@ aside .widget-bar, .right-bar, header, footer, article {
     white-space: nowrap;
     overflow: hidden;
     padding: 7px;
-    
+    letter-spacing: 1px;
+    font-weight: 300;
+    transition: 0.5s;
 }
 
-.card p{
+.card p { 
     margin-top: 30px;
     height: calc(100% - 30px);
     display: flex;
@@ -764,7 +872,8 @@ aside .widget-bar, .right-bar, header, footer, article {
     transition: all 0.5s ease;
 }
 
-.card:hover p, .card:hover h4 {
+.card:hover p,
+.card:hover h4 {
     background-color: rgba(0, 0, 0, 0.75);
 }
 
@@ -781,20 +890,10 @@ aside .widget-bar, .right-bar, header, footer, article {
     display: block;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 footer {
     display: flex;
     justify-content: center;
+    margin-bottom: 15px;
 }
 
 .footer-content {
@@ -804,21 +903,13 @@ footer {
     text-align: center;
 }
 
+.footer-content h3 {
+    padding: 0 0 12px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.footer-content P {
+    margin: 20px 0 6px 0;
+}
 
 @media (max-width: 1200px) {
     .right-bar.side-bar {
@@ -827,49 +918,105 @@ footer {
         max-width: unset;
     }
 
-    .main{
+    .main {
         flex: 0 0 calc(100% - 245px);
         margin: -7.5px -7.5px 0 30px;
     }
 
-    .content{
+    .content {
         flex-wrap: wrap;
     }
 
-    .content-wrapper{
+    .content-wrapper {
         padding: 0 15px;
+    }
+
+    .widgets-container {
+        margin-top: -12.5px;
     }
 
 }
 
-@media (max-width: 993px) {
-    .main{
+@media (max-width: 992px) {
+    .main {
         order: 0;
         flex: 0 0 100%;
         margin:0;
     }
 
-    .side-bar.left-bar{
+    .side-bar.left-bar {
         order: 1;
         width: 50%;
         flex: unset;
     }
 
-    .side-bar.right-bar{
+    .side-bar.right-bar {
         order: 2;
         width: 50%;
         flex: unset;
     }
 
-    .main-nav, .main-title{
+    .main-nav, .main-title {
         margin: 0 0 30px 0;
     }
 
-    .main-content{
+    .main-content {
         margin: 0 -7.5px;
     }
     
-    .widget-bar{
+    .widget-bar {
         padding:0;
+    }
+
+    .right-bar .bar-wrapper {
+        padding-left:7.5px;
+    }
+
+    .left-bar .bar-wrapper {
+        padding-right:7.5px;
+    }
+
+    .widgets-container {
+        flex-wrap: wrap;
+    }
+
+    .widget-wrap {
+        flex: 0 0 50%
+    }
+
+    .widget {
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-wrapper {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .side-bar.left-bar {
+        flex: 0 0 100%;
+    }
+
+    .left-bar .bar-wrapper {
+        padding-right: 0;
+    }
+
+    .side-bar.right-bar {
+        flex: 0 0 100%;
+    }
+
+    .right-bar .bar-wrapper {
+        padding-left: 0;
+    }
+
+    .side-bar.right-bar {
+        margin-top: 0;
+    }
+
+    .widget-wrap {
+        flex: 0 0 100%;
     }
 }
